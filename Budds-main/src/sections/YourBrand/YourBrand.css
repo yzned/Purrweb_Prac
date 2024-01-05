@@ -1,0 +1,116 @@
+.YourBrand{
+    background-color: white;
+    padding: 100px 60px;
+}
+.Let_Your_Busines{
+    text-align: center;
+    border: 1px solid #CFCFCF;
+    border-radius: 60px;
+    padding: 60px 0px;
+}
+.Let_Your_Busines_Header{
+    font-size: 64px;
+    margin-bottom: 40px;
+}
+.YourBrand_Content{
+    display: flex;
+    margin: 100px 0px;
+}
+.YourBrand_Content_Text{
+    width: 70%;
+}
+.YourBrand_Content_Header{
+    font-size: 96px;
+}
+.YourBrand_Content_Info
+{
+    width: 60%;
+    font-size: 20px;
+}
+.YourBrand_Content_icons{
+    padding: 45px 0;
+    width:50%;
+}
+.Content_icon{
+    text-align: center;
+    background-color: #954CED;
+    padding: 22.64px 20.09px 20.09px 22.64px;
+    border-radius: 50px;
+}
+.TwoIcons{
+    display: flex;
+    justify-content: space-between;
+    width: 72%;
+}
+.YourBrand_Companies{
+    display: flex;
+    justify-content: space-between;
+}
+.Company{
+    display: inline-block;
+}
+.Companies_icon{
+    width: 100%;
+    height: 100%;
+}
+@media(max-width:500px){
+    .Company{
+        width: 40%;
+        margin-top: 20px;
+    }
+}
+@media(max-width:1200px){
+    .YourBrand_Content{
+        margin: 40px 0px;
+    }
+    
+    .YourBrand_Content_Text{
+        width: 50%;
+        padding: 45px 0px;
+    }
+    .YourBrand_Content_Header{
+        font-size: 50px;
+    }
+    .YourBrand_Content_Info
+    {
+        font-size: 24px;
+        width: 100%;
+    }
+
+}
+@media(max-width:800px){
+    .YourBrand{
+        background-color: white;
+        padding: 40px 16px 40px 16px;
+    }
+    .Let_Your_Busines{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .Let_Your_Busines_Header{
+        font-size:40px;
+    }
+    .YourBrand_Content{
+        display: block;
+        margin: 40px 0px;
+    }
+    .YourBrand_Content_Text{
+        width: 100%;
+    }
+    .YourBrand_Content_Header{
+        font-size: 40px;
+    }
+    .YourBrand_Content_Info
+    {
+        font-size: 20px;
+        width: 100%;
+    }
+    .YourBrand_Content_icons{
+        padding: 45px 0;
+        width:100%;
+    }
+    .YourBrand_Companies{
+        flex-wrap: wrap;
+    }
+    
+}

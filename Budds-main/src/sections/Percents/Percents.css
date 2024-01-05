@@ -1,0 +1,52 @@
+.Percents{
+    display: flex;
+    color: white;
+    background-color: #954CED;
+    padding: 40px 0px 40px 0px;
+    justify-content: center;
+}
+.Percents_Content{
+    width: 12%;
+    margin-left: 100px;
+}
+.Percent_Head{
+    font-size: 64px;
+    font-weight: 700;
+}
+.Percent_Info{
+    font-size: 24px;
+    font-weight: 600;
+}
+@media(max-width:800px){
+    .Percents{
+        display: block;
+    }
+    .Percents_Content{
+        display: flex;
+        width: 100%;
+        margin-top: 40px;
+        align-items: center;
+        justify-content: center;
+        padding-left: 3%;
+        margin-left: 0;
+    }
+    .Percent_Head{
+        font-size: 60px;
+    }
+    .Percent_Info{
+        font-size: 26px;
+        margin-left: 20px;
+    }
+}
+@media(max-width:500px){
+    .Percents_Content{
+        justify-content:left;
+
+    }
+    .Percent_Head{
+        font-size: 40px;
+    }
+    .Percent_Info{
+        font-size: 20px;
+    }
+}

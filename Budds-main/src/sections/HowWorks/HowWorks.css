@@ -1,0 +1,36 @@
+.HowWorks{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    position: relative;
+
+}
+.phoneImg{
+    position: absolute;
+    top: 0%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+.Slide_item{
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 128px;
+    margin-top: 70px;
+    padding-left: 50px;
+    overflow: hidden;
+
+}
+@media(max-width:800px){
+    .Slide_item{
+        white-space: nowrap;
+        font-weight: 700;
+        font-size: 48px;
+        margin-top: 70px;
+        padding-left: 50px;
+        overflow: hidden;
+    
+    }
+}

@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    line-height:1.2;
+    box-sizing: border-box;
+}
+
+body,html{
+    overflow-x: auto;
+}
+a {
+    text-decoration: none ;
+  }
+button{
+    border: none;
+    cursor: pointer;
+}
+.App{
+    background-color: #181818;
+}
