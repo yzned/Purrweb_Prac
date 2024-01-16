@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./sections/Header/Header.css">
+    <link rel="stylesheet" href="./sections/Everyone/Everyone.css">
+    <link rel="stylesheet" href="./sections/About/About.css">
+    <link rel="stylesheet" href="./sections/HowWorks/HowWorks.css">
+    <link rel="stylesheet" href="./sections/Percents/Percents.css">
+    <link rel="stylesheet" href="./sections/WhyBudds/WhyBudds.css">
+    <link rel="stylesheet" href="./sections/YourBrand/YourBrand.css">
+    <link rel="stylesheet" href="./sections/Footer/Footer.css">
+    <link rel="stylesheet" href="./sections/Menu/MyMenu.css">
+    <link rel="stylesheet" href="./Main.css">
+    <link rel="stylesheet" href="./sections/Contact-Button/MyButton.css">
+    <link rel="stylesheet" href="./sections/Modal/Modal.css">
+    <link rel="stylesheet" href="./sections/CookieBanner/CookieBanner.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="CookieBanner" id = "CookieBanner">
+            <div class='cookieContent'>
+            <p class='cookieText'> 
+            This website uses cookies to ensure you get the best experience on our website. They also allow us to analyze 
+            user behavior in order to constantly improve the website for you.
+            </p>
+            <div class="cookieButtons">
+                <button class="cookieButton cookieButton_accept" onclick="closeCookie()">
+                Accept
+                </button>
+                <button class="cookieButton cookieButton_decline" onclick="closeCookie()">
+                Decline
+                </button>
+            </div>
+                <button class="cookiebutton_close" onclick="closeCookie()">
+                <img src="./sections/CookieBanner/close.svg" alt="" />
+                </button>
+            </div>
+    </div>
+    <div class="modal" id ="Thanks">
+        <div class ="modal_close_area" onclick="hidenModal();formSubmit()"></div>
+        <div class='Thank modal_content'>
+            <div style="position:relative">
+                <div class='Thank_close'>
+                    <img src="./sections/Contact-Button/close.svg" alt="" onclick="hidenModal();formSubmit()"/>
+                </div>
+                <img src="./sections/Contact-Button/thankBoy.svg" alt="" />
+            </div>
+                <p class='Thank_Title'>Thank you!</p>
+                <p class='Thank_text'>Thank you, we have received your application and will contact you soon!</p>
+                <button class='ContactButton' style="width:100%;border:none" onclick="hidenModal();formSubmit()">Super!</button>
+        </div>
+    </div>
+    <div class="modal" id = "modalReg" >
+        <div class ="modal_close_area" onclick="hidenModal()"></div>
+        <div class="modal_content" >
+            <form class='registration_modal' onsubmit="checkInputFields(event)" id = "reg_form">
+                <div class='registration_box'>
+                    <div class='registration_close' onclick="hidenModal()">
+                            <img src="./sections/Modal/close.svg" alt=""/>
+                    </div>
+                  <h5 class='registration_title'>Name <span style="color:red">*</span></h5>
+                    <input type="text" 
+                        class='registration_input' 
+                        placeholder='Enter name'
+                        id = "Name" 
+                    />
+                   <span style="font-size:12px ;margin-top:4px;" class="Error_text" id ="Error_name">
+                    This field is required. </span>
+                </div>
+                <div class='registration_box'>
+                  <h5 class='registration_title'>Email <span style="color:red">*</span></h5>
+                      <input type="email" 
+                        class='registration_input' 
+                        placeholder='Enter email' 
+                        id = "Email" 
+                      />
+                      <span style="font-size:12px ;margin-top:4px;" class="Error_text" id ="Error_email">
+                        This field is required. </span>
+                </div>
+                <div class='registration_box'>
+                  <h5 class='registration_title'>Phone Number <span style="color:red">*</span></h5>
+                      <input type="text" 
+                        class='registration_input' 
+                        placeholder='+ 1 900 000 00 00' 
+                        id = "Number"
+                    />
+                    <span style="font-size:12px ;margin-top:4px;" class="Error_text" id ="Error_num">
+                        This field is required. 
+                    </span>
+                </div>
+                <div class='registration_box'>
+                  <h5 class='registration_title'>Company</h5>
+                      <input type="text" 
+                        class='registration_input' 
+                        placeholder='Enter company' 
+                        id = "Company"
+                      />
+                </div>
+                <div class='registration_box'>
+                  <h5 class='registration_title'>Website/store URL</h5>
+                  <input type="text" 
+                  class='registration_input'
+                  placeholder='Enter Website/Store URL'
+                  id = "Website"
+                  />
+                </div>
+                    <div class="Error_text" id = "Request" >
+                    Please fill in all required fields </div>  
+                  <p class='registration_text'>
+                  By submitting this form you 
+                  are agreeing to Budss’s <a href=""> Pricacy Policy</a> and <a href=""> Terms of Use</a> 
+                  </p>
+                <input type="submit" class='ContactButton' style="background-color:#B9B9B9; border-style:none;" value="Contact sales" onclick="checkInputFields()"/>
+            </form>
+        </div>
+    </div>
+    <div class="fullscreen-menu"  >
+        <div class="fullscreen-menu-content" id = "fullscreen-menu-content">
+            <div onclick="closeMenu()" >
+                <img src="./sections/Menu/BigClose.svg" class='close_btn' />
+            </div>
+            <div class="Menu">
+                <button class="ContactButton" onclick="activeModal()">
+                    Contact Sales
+                </button>
+                    <div class="Menu_links">
+                        <a href="" class="footer_main_content_link">For Busines</a>
+                        <a href="" class="footer_main_content_link">For Customers</a>
+                        <a href="" class="footer_main_content_link">Privacy Policy</a>
+                        <a href="" class="footer_main_content_link">Terms Of Use - Seller</a>
+                        <a href="" class="footer_main_content_link">Terms of Use - Sellers & Customers</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <header class='Header'>
+        <nav>
+            <button class='navButton' id="ClickToSetForBusines" onclick="SetUserBusines()">For Busines</button>
+            <button class='navButton' id="ClickToSetForCustomer" onclick="SetUserCustomers()">For Customers</button>
+        </nav>
+        <div class='Fixed_Section'>
+            <div class="Fixed_Section_Content">
+                <img src="./sections/Header/logoBudss.svg" alt="^-^"/>
+                <!-- Business -->
+                <button class="ContactButton ContactButton_Header" id = "ContactButtonHead" onclick="activeModal()">
+                    Contact Sales
+                </button>
+                <!-- Customer -->
+                <div class="Fixed_section_markets" id="Markets" > 
+                    <img src="./sections/Header/Google.svg"alt="" class="Fixed_section_market" style="padding-right:14px"/>
+                    <img src="./sections/Header/Apple.svg" alt="" class="Fixed_section_market" style="padding-left:14px; border-left:1px solid gray"/>
+                </div>
+                <!-- Business -->
+                <div class="MenuButton_Header" id="menuButton" onclick="showMenu()"><img src="./sections/Header/menuButton.svg" alt="^_^"/></div>
+            </div>
+        </div>
+    </header>
+    <div class ='everyone'>
+        <div class ='everyoneContent'>
+            <h1 class ='head'>Everyone <p>is an Influencer</p></h1>
+            <p class ='description'>Budss is a payments as a service and WOM engine dedicated 
+                <br/>to acquisition and retention of customers to your business.
+            </p>
+            <button class="ContactButton" style="margin-top: 40px;" onclick="activeModal()">
+                Contact Sales
+            </button>
+        </div>
+        <img src="./sections/Everyone/girlPNG.png" alt="" class ='everyoneGirl'/>
+    </div>s
+    <div class ='About'>
+        <h1 class ='aboutHeader'>About Budss</h1>
+        <div class ='AboutContent'>
+            <div class ='AboutLeft'> 
+                <p class ='AboutDescription'>
+                    Payment as a service,<br />powered seamlessly by<br /> our <span class ='PurpleBack'>network of shoppers</span>
+                </p>
+                <img src="./sections/About/logoR.svg" alt="" class ='logoR'/>
+            </div>
+            <div class ='AboutRight'>
+                <div class ='RightTop'>
+                    <div class ='RightItem'>
+                        <img src="./sections/About/star.svg" alt="" />
+                        <h1 class ='ItemTitle'>Contactless</h1>
+                        <p class ='itemInformation'>Budss uses near field communication (NFC) for making contactless payments.</p>
+                    </div>
+                    <div class ='RightItem'>
+                        <img src="./sections/About/loop.svg" alt="" />
+                        <h1 class ='ItemTitle'>Increased Buying Power</h1>
+                        <p class ='itemInformation'>Returning customers spend up to 3X more.</p>
+                    </div>
+                </div>
+                <div class ='RightBottom'>
+                    <div class ='RightItem'>
+                        <img src="./sections/About/zig-zag.svg" alt="" />
+                        <h1 class ='ItemTitle'>Analytics & Insights</h1>
+                        <p class ='itemInformation'>Gain a holistic view into your customers’ buying behavior & purchasing patterns. </p>
+                    </div>
+                    <div class ='RightItem'>
+                        <img src="./sections/About/chain.svg" alt="" />
+                        <h1 class ='ItemTitle'>Fraud Protection</h1>
+                        <p class ='itemInformation'>Budss handles all payments with a fraud prevention algorithm to flag high risk purchases & a user set PIN code to keep payment info secure. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='HowWorks'>
+        <div>
+            <div class='howSlide' direction="right" scrollamount="30" style="padding-left:30px;"> 
+                    <div class='Slide_item slide_one' style="color:#2FDBBC">
+                        How Budds Works
+                    </div>
+                    <div class='Slide_item slide_two' style="color: #181818; -webkit-text-stroke: 1px #444444">
+                        How Budds Works
+                    </div>
+                    <div class='Slide_item slide_one' style="color:#2FDBBC">
+                        How Budds Works
+                    </div>
+                    <div class='Slide_item slide_two' style="color: #181818; -webkit-text-stroke: 1px #444444">
+                        How Budds Works
+                    </div>
+            </div>
+            <div class='howSlide' scrollamount="30"> 
+                    <div class='Slide_item slide_one reverce' style="color:#A64CED">
+                        How Budds Works
+                    </div>
+                    <div class='Slide_item slide_two reverce' style="color: #181818; -webkit-text-stroke: 1px #444444">
+                        How Budds Works
+                    </div>
+                    <div class='Slide_item slide_one reverce' style="color:#A64CED">
+                        How Budds Works
+                    </div>
+                    <div class='Slide_item slide_two reverce' style="color: #181818; -webkit-text-stroke: 1px #444444">
+                        How Budds Works
+                    </div>
+            </div>
+            <div class='howSlide' direction="right" scrollamount="30"> 
+                    <div class='Slide_item slide_one' style="color:#FFAA4C">
+                        How Budds Works
+                    </div>
+                    <div class='Slide_item slide_two' style="color: #181818; -webkit-text-stroke: 1px #444444">
+                        How Budds Works
+                    </div>
+                    <div class='Slide_item slide_one' style="color:#FFAA4C">
+                        How Budds Works
+                    </div>
+                    <div class='Slide_item slide_two' style="color: #181818; -webkit-text-stroke: 1px #444444">
+                        How Budds Works
+                    </div>
+            </div>
+        </div>
+        <div class='phoneImg'>
+            <img src="./sections/HowWorks/phone.png" alt="" />
+        </div>
+    </div>
+    <div class='Percents'>  
+        <div class='Percents_Content' style="margin-top:0">
+            <h1 class='Percent_Head'>15%</h1>
+            <span class='Percent_Info'>Increase in Purchase Amount</span>
+        </div>
+        <div class='Percents_Content'>
+            <h1 class='Percent_Head'>30%</h1>
+            <span class='Percent_Info' >Growth in Annual Sales</span>
+        </div>
+        <div class='Percents_Content'>
+            <h1 class='Percent_Head'>10%</h1>
+            <span class='Percent_Info'>Growth in New Customers</span>
+        </div>
+    </div>
+    <div class='WhyBudds'>
+        <div class='WhyBudds_Header'>
+            <h1 class='WhyBudds_title'>Why Budds</h1>
+            <p class='WhyBudds_Description'>
+                We Provide Advanced Payment Solutions<br /><span class='PurpleBack'>To Grow Your Business</span>
+            </p>
+        </div>
+        <div class='WhyBudds_Frames'>
+            <div class='Frames_Top'>
+                <div class='BigFrame Frame'>
+                    <div>
+                        <picture>
+                            <source srcset="./sections/WhyBudds/topLeftSmall.png" media="(max-width:800px)">
+                            <img src="./sections/WhyBudds/topLeft.png" alt="" class="BigFrame_img">
+                        </picture>
+                    </div>
+                    
+                    <div class='Frame_Text_topLeft' >
+                        <h1 class='Frame_title' >Turn your customers into loyal influencers</h1>
+                        <p class='Frame_Info'>Budss helps businesses harness the exponential power of loyal customers for acquisition and retention.</p>
+                    </div>
+                    </div>
+                    <div class='SmallFrame Frame'>
+                        <div class='Frame_Text_topRight'>
+                            <h1 class='Frame_title'>Harness the power of buying in bulk</h1>
+                            <p class='Frame_Info'>Get at least 2X more sales with Budss Buying Groups. Your customer base will grow exponentially as your customers add their friends & family to your personalized group.</p>
+                        </div>
+                        <img src="./sections/WhyBudds/yellowPackage.svg" alt="" class='greenPacket'/>
+                        <img src="./sections/WhyBudds/greenPackage.svg" alt="" class='yellowPacket'/>
+                        <img src="./sections/WhyBudds/purplePackage.svg" alt=""class='purplePacket'/>
+                    </div>           
+            </div>
+            <div class='Frames_bottom'>
+                    <div class='SmallFrame Frame'>
+                        <div class='Frame_Text Frame_Text_botLeft'>
+                            <h1 class='Frame_title' style="width:100%">Supercharge Loyalty With Instant Cash Back</h1>
+                            <p class='Frame_Info Frame_Info_botLeft' >Budss allows for shoppers to earn immediate cash back at their favorite stores.</p>
+                        </div>
+                        <img src="./sections/WhyBudds/likeBoy.svg" alt="" class="SmallFrame_likeBoy"/>
+                    </div>
+                    <div class='BigFrame Frame'>
+                        <div class='Frame_Text Frame_Text_botRight'>
+                            <h1 class='Frame_title'>Seasoned with AI and Gamification</h1>
+                            <p class='Frame_Info Frame_Info_botRight'>AI programming creates a personalized customer journey, offering recommendations for their next purchase and optimizing rewards for after purchase.</p>
+                        </div>
+                        <img src="./sections/WhyBudds/boyWithPhone.svg" class='boyWithPhone' alt=""/>
+                    </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class='YourBrand'>
+        <div class="Let_Your_Busines">
+          <h1 class="Let_Your_Busines_Header" >Let  Your Business Grow</h1>
+          <button class="ContactButton" style="margin-top: 40px; border: none;" onclick="activeModal()">
+            Contact Sales
+           </button>
+        </div>
+        <div class="YourBrand_Content">
+            <div class="YourBrand_Content_Text">
+                <h1 class="YourBrand_Content_Header">Your Brand Awareness Maters</h1>
+                <p class="YourBrand_Content_Info">Budss is a husle free solution to put your brand on any digital surface including Instagram, Facebook, Twitter and TikTok</p>
+            </div> 
+            <div class="YourBrand_Content_icons">
+                <div class='TwoIcons'>
+                    <img src="./sections/YourBrand/Facebook - Original.svg" alt="" />
+                    <div class="Content_icon">
+                        <img src="./sections/YourBrand/Instagram - Negative.svg" alt="" />
+                    </div>
+                </div>
+                <div class='TwoIcons' style="margin-left:auto">
+                    <div class="Content_icon">
+                        <img src="./sections/YourBrand/Twitter - Original.svg" alt="" />
+                    </div>
+                    <div class="Content_icon">
+                        <img src="./sections/YourBrand/TikTok - Negative.svg" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="YourBrand_Companies">
+            <div class='Company'>
+                <img src="./sections/YourBrand/CompaniesIcons/Woo.svg" alt="" class='Companies_icon'/>
+            </div>
+            <div class='Company'>
+                <img src="./sections/YourBrand/CompaniesIcons/shopify.svg"alt="" class='Companies_icon'/>
+            </div>
+            <div class='Company'>
+                <img src="./sections/YourBrand/CompaniesIcons/square.svg" alt="" class='Companies_icon'/>
+            </div>
+            <div class='Company'>
+                <img src="./sections/YourBrand/CompaniesIcons/squarespace.svg" alt="" class='Companies_icon'/>
+            </div>
+            <div class='Company'>
+                <img src="./sections/YourBrand/CompaniesIcons/clover.svg"alt="" class='Companies_icon'/>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer_main_content">
+            <div class="main_content_logo">
+                <img src="./sections/Footer/logoBudss.svg"alt="" />
+            </div>
+            <div class="main_content_links">
+                <button class="footer_main_content_link" >For Busines</button>
+                <button class="footer_main_content_link" >For Customers</button>
+                
+                <div class="main_content_links_OnlyPhone">
+                    <button class="footer_main_content_link">Privacy Policy</button>
+                    <button class="footer_main_content_link">Term Of Use - Seller</button>
+                    <button class="footer_main_content_link">Term Of Use - Sellers and Customers</button>
+                </div>
+            </div>
+            <button class="ContactButton" style="width: 182px;" onclick="activeModal()">
+                Contact Sales
+            </button>
+            <div class="main_content_stores">
+                <div class='main_content_stores_image'>
+                    <a href=""><img src="./sections/Footer/appstore.svg" alt=""  class='main_content_stores_image'/></a>    
+                </div>
+                <div class='main_content_stores_image'>
+                    <a href=""><img src="./sections/Footer/googleplay.svg" alt="" class='main_content_stores_image'/></a>                     
+                </div>
+            </div>
+        </div>
+        <div class="footer_Copyright">
+            <p>
+                © Copyright 2023, All Rights Reserved by Budss
+            </p>
+                <div class="footer_Copyright_MoreThan800" >
+                    <a href="" class="Copyright_link">Privacy Policy</a>
+                    <a href="" class="Copyright_link">Term Of Use - Seller</a>
+                    <a href="" class="Copyright_link">Term Of Use - Sellers and Customers</a>
+                </div>
+        </div>
+    </footer>
+    <script src="./Scripts/SetUserType.js"></script>
+    <script src="./Scripts/Modal.Js"></script>
+    <script src="./Scripts/CookieAndMenu.js"></script>
+    
+</body>
+</html>

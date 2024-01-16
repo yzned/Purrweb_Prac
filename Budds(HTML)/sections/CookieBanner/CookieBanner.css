@@ -1,0 +1,101 @@
+.CookieBanner{ 
+    display:flex;
+    justify-content: center;
+    
+}
+.cookieContent{
+   background-color: white;
+   position:fixed;
+   z-index: 1000;
+   bottom: 0;
+   width: 90%;
+   padding: 30px;
+   margin: 0px 20px 30px 0px;
+   display: flex;
+   justify-content: space-around;
+   animation: cookie-appearance 1s;
+}
+.cookieText{
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 140%;
+}
+.cookieButtons{
+    margin-left: 5%;
+    margin-right: 1%;
+    display: flex;
+    align-items: center;
+}
+.cookieButton{
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 20px;
+    height: 57px;
+    width: 124px;
+    border-radius: 16px;
+}
+.cookieButton_accept{
+    color: white;
+    background-color: #954CED;
+}
+.cookieButton_decline{
+    background-color: white;
+    border: 2px solid #954CED;;
+}
+.cookieButton_accept:hover{
+    transition-duration: 0.2s;
+    transform: scale(1.05) perspective(10px);
+    background-color: #181818;
+}
+.cookieButton_decline:hover{
+    transition-duration: 0.2s;
+    transform: scale(1.05) perspective(10px);
+    color: white;
+    background-color: #181818;
+    border: none;
+}
+.cookieButton_accept,.cookieButton_decline:not(:hover){
+    transition-duration: 0.4s;
+    transform: scale(1) perspective(10px);
+}
+.cookiebutton_close{
+    margin-left: 20px;
+    background-color: white;
+    position: absolute;
+    cursor: pointer;
+    right: 15px;
+    top: 15px;
+}
+.close_animation{
+    background-color: red;
+    transition: background-color 2s, font-size 2s;
+}
+@media(max-width:800px){
+    .cookieContent{
+        display: block;
+     }
+     .cookieButtons{
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cookieButton{
+        margin-left: 0px;
+    }
+    .cookieButton_accept{
+        width: 100%;
+    }
+    .cookieButton_decline{
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+@keyframes cookie-appearance{
+    from{
+        bottom:-100%;
+    }
+}

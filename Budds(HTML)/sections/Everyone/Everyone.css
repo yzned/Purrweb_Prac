@@ -1,0 +1,49 @@
+.everyone{
+    padding-left: 7%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 52px;
+}
+.head{
+    font-size: 96px;
+}
+.description{
+    font-size: 20px;
+    margin-top: 20px;
+}
+.everyoneBtn{
+    margin-top:40px ;
+}
+.everyoneGirl{
+    width: 40%;
+}
+@media (max-width:1200px){
+    .head{
+        font-size: 60px;
+    }
+    .description{
+        margin-top: 20px;
+    }
+}
+@media (max-width:800px){
+    .everyone{
+        padding-left: 0%;
+    }
+    .everyoneContent{
+        margin: 0 2% 0 2%;
+    }
+    .head{
+        font-size: 40px;
+    }
+    .everyoneGirl{
+        width: 100%;
+        margin-top: 60px;
+    }
+    .everyoneBtn{
+        width: 100%;
+    }
+    .everyone{
+        display: block;
+    }
+}

@@ -1,0 +1,63 @@
+.HowWorks{
+    margin-top: 100px;
+    margin-bottom: 150px;
+    position: relative;
+
+}
+.phoneImg{
+    position: absolute;
+    top: 8%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+.howSlide{
+    display: flex;
+    overflow: hidden;
+}
+.Slide_item{
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 128px;
+    margin-top: 70px;
+    padding-left: 50px;
+}
+.slide_one{
+    animation: marquee1 20s infinite linear;
+    animation-delay: -20s;
+}
+.slide_two{
+    animation: marquee2 20s infinite linear;
+    animation-delay: -10s;
+}
+@keyframes marquee1 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes marquee2 {
+    0% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+.reverce{
+    animation-direction: reverse;
+}
+@media(max-width:800px){
+    .Slide_item{
+        white-space: nowrap;
+        font-weight: 700;
+        font-size: 48px;
+        margin-top: 70px;
+        padding-left: 50px;
+    }
+}

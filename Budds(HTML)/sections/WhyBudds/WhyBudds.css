@@ -1,0 +1,210 @@
+.WhyBudds{
+    padding: 8%;
+}
+.WhyBudds_Header{
+    text-align: center;
+}
+.WhyBudds_title{
+    color: white;
+    font-size: 64px;
+    font-weight: 700;
+}
+.WhyBudds_Description{
+    margin-top: 20px;
+    font-size: 36px;
+    font-weight: 600;
+    color: white;
+}
+.WhyBudds_Frames{
+    margin-top: 70px;
+}
+.Frames_Top{
+    display: flex;
+    justify-content: space-between;
+}
+.Frames_bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1%;
+    height: 50%;
+}
+.BigFrame{
+    background-color: white;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    width: 60%;
+    border-radius: 30px;
+    position: relative;
+}
+
+.SmallFrame{
+    background-color: white;
+    border-radius: 30px;
+    width: 39%;
+    overflow: hidden;
+    position: relative;
+}
+
+.BigFrame_img{
+    width: 120%;
+    height: 100%;
+}
+
+.Frame_Text{
+    margin: 40px;
+}
+.Frame_Text_topLeft{
+    margin: 40px 50px 60px 40px;
+}
+.Frame_Text_topRight{
+    margin:40px 40px 100px 40px;
+}
+.Frame_Text_botLeft{
+    margin:40px 40px 80px 40px;
+}
+
+.Frame_title{
+    font-size: 48px;
+    font-weight: 600;
+    width: 87%;
+}
+.Frame_Info{
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+.Frame_Info_botLeft{
+    width: 60%;
+}
+.SmallFrame_likeBoy{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.Frame_Text_botRight{
+    width: 55%;
+}
+.boyWithPhone{
+    position:absolute;
+    bottom:0; 
+    right:3%;
+    width: 210px;
+    height: 301px;
+}
+.yellowPacket{
+    position:absolute;
+    bottom:0;
+    left:70%;
+}
+.greenPacket{
+    position:absolute;
+    bottom:0; 
+    left:10%;
+}
+.purplePacket{
+    position:absolute;
+    top:25%;
+    left:87%;
+}
+
+
+@media(max-width:1200px){
+    .WhyBudds{
+        padding:80px 8%;
+    }
+    .Frame_title{
+        font-size: 40px;
+        font-weight: 600;
+
+    }
+    .Frame_Info{
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 20px;
+    }
+
+    .Frame_Info_botRight{
+        width: 80%;
+
+    }
+    .Frame_Info_botLeft{
+        width: 100%;
+    }
+}
+@media(max-width:800px){
+    .Frame_Text_topLeft{
+        margin:20px 20px 30% 20px;
+    }
+    
+    .Frame_Text_topRight{
+        margin:20px 20px 50% 20px;
+    }
+    .WhyBudds_title{
+        font-size: 40px;
+    }
+    .WhyBudds_Description{
+        font-size: 24px;
+    }
+    .Frames_Top{
+        display: block;
+    }
+    .Frames_bottom{
+        display: block;
+    }
+    .BigFrame{
+        display: block;
+        width: 100%;
+        border-radius: 30px;
+        padding-bottom:30% ;
+    }
+    .BigFrame_img{
+        position: absolute;
+        bottom: 0;
+        width: 343px;
+        height: 193px;
+    }
+    .SmallFrame{
+        width: 100%;
+    }
+    .Frame_Text{
+        margin: 20px 20px 30% 20px;
+    }
+    .Frame_Text_botRight{
+        width: 90%;
+    }
+    .Frame_title{
+        font-size: 32px;
+        font-weight: 600;
+        width: 100%;
+    }
+    .Frame_Info{
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 16px;
+    }
+    .Frame_Info_botRight{
+        width: 100%;
+    }
+    .boyWithPhone{
+        width: 50%;
+        height: 50%;
+    }
+    .topLeftSmall{
+        position:absolute;
+        bottom: 0;
+    }
+    .yellowPacket{
+        left:40%;
+    }
+    .purplePacket{
+        top:45%;
+        left:87%;
+    }
+    .Frames_bottom{
+        margin-top: 0%;
+    }
+    .Frame{
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,65 @@
+nav{
+    background-color: #FFAA4C;
+    height: 38px;
+    padding-left: 60px;
+    white-space: nowrap;
+    z-index: 10;
+}
+.navButton{
+    background-color: transparent;
+    font-size: 16px;
+    height: 100%;
+    width: 185px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.navButton:focus{
+    background-color: #181818;
+    color: white;
+}
+.Fixed_Section_Content{
+    height: 71px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #181818;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.Fixed_section_markets{
+    display: none;
+    padding: 16px 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    border: 1px solid #954CED;
+}
+.hidden-element{
+    display: none;
+}
+.MenuButton_Header{
+    display: none;
+}
+
+@media (max-width:800px){
+    nav{
+        padding: 0;    
+    }
+    .Fixed_Section_Content{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    
+    .MenuButton_Header{
+        display: block;
+    }
+    .ContactButton_Header{
+        display: none !important;
+    }
+}
+@media(min-width:800px){
+    .MenuButton_Header{
+        display: none !important;
+    }
+}
